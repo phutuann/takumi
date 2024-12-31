@@ -16,8 +16,25 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theme-btn {
+    background-color: #ff8a00;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #ff6600;
 }
 
 .content {
@@ -29,15 +46,16 @@ header {
 .card {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    width: 200px;
+    width: 220px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card a {
@@ -45,6 +63,11 @@ header {
     color: #333;
     font-size: 1.2rem;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card a:hover {
+    color: #ff8a00;
 }
 
 footer {
@@ -77,4 +100,13 @@ body.dark-mode .card a {
 
 body.dark-mode footer {
     background-color: #444;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode .theme-btn:hover {
+    background-color: #333;
 }
